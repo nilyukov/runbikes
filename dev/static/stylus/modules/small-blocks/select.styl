@@ -1,0 +1,57 @@
+.select
+  position relative
+  &.select--open
+    .select
+      &__body
+        display: block
+      &__icon
+        transform rotate(180deg)
+
+  &__body
+    position absolute
+    border-radius 0 0 2px
+    border 1px solid alto
+    border-top 0
+    left: 0
+    top: 100%
+    width: auto
+    min-width 100%
+    z-index 1
+    background-color: white
+    display: none
+
+  &-list
+    &__item
+      height: 40px
+      line-height: 40px
+      padding: 0 10px
+      cursor pointer
+      &:hover
+        background-color: athens-gray
+
+  &__header
+    display: flex
+    align-items: center
+    height: 40px
+    border-radius 2px
+    border: 1px solid alto
+    font-size: 12px
+    padding: 0 15px
+    & > *
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
+
+    &.select__header--multi
+      .select
+        &__current
+          font-weight: 700
+
+  &__icon
+    fill blaze-orange
+    size(15px)
+    margin-left: auto
+
+  &__description
+    @media screen and (max-width: phoneSize)
+      display: none

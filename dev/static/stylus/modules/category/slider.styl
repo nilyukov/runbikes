@@ -1,0 +1,61 @@
+.category-slider
+  background-color: athens-gray
+  border-radius 4px
+  padding: 0 0 20px
+  &__header
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+
+  &__title
+    font-size: 19px
+    line-height: 1.58
+    font-family: banner-title-font
+    background-color: rgba(52, 59, 76, 0.5)
+    border-radius 0 0 4px 4px
+    padding: 10px 20px
+    color white
+    text-align center
+    @media screen and (max-width: phoneSize)
+      font-size: 14px
+      line-height: 1.43
+
+  &__icon
+    size(30px)
+    fill blaze-orange
+    display: block
+    margin: 0 auto 15px
+
+  &__item
+    margin: 0 10px
+    padding: 0 10px
+    text-align center
+    outline none
+    font-size: 12px
+    @media screen and (max-width: phoneSize)
+      padding: 0
+
+  &__dots
+    display: none
+    justify-content: center
+    position absolute
+    bottom: -20px
+    width: 100%
+    @media screen and (max-width: tabletSize)
+      display: flex
+    .slick-dots
+      display: flex
+      align-items: center
+      & > *
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+      li
+        &.slick-active
+          .category-slider__dot
+            background-color: blaze-orange
+  &__dot
+    size(10px)
+    background-color: alto
+    border-radius 50%
+    cursor pointer

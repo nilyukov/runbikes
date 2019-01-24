@@ -1,0 +1,79 @@
+.product-info
+    .product-info__header
+        h1.title-page
+            |   Беговел Puky Pukylino
+        img(src="static/img/content/brands/puky.jpg" alt='Логотип бренда').product-info__logo
+    .product-info__body
+        .product-info__row
+            .product-info__rating
+                .product-info__rating-stars
+                    +icon('star','product-info__rating-icon--active')
+                    +icon('star','product-info__rating-icon--active')
+                    +icon('star','product-info__rating-icon--active')
+                    +icon('star','product-info__rating-icon--active')
+                    +icon('star','product-info__rating-icon')
+                a(href='').product-info__link
+                    |   3 отзыва
+            .product-info__articul
+                span.product-info__text
+                    |   Артикул: <b>3015</b>
+        .product-info__row
+            .product-info__color
+                span.product-info__text
+                    |   Выберите цвет:
+                ul.color-list
+                    each color in ['000000', '666666','ffffff']
+                        if(color === 'ffffff')
+                            li.color-list__item.color-list__item--white(style=`background-color:#${color}`)
+                        else
+                            li.color-list__item(style=`background-color: #${color}`)
+
+            .product-info__available
+                span.product-info__text
+                    |   Наличие:
+                .product-info__available-view
+                    each i in [1,2,3,4,5]
+                        .product-info__available-view__item
+        .product-info__row
+            .product-info__price
+                span.product-info__price-old
+                    |   4 990 руб.
+                span.product-info__price-current
+                    |   3 990 руб.
+                a(href='').product-info__link
+                    |   Нашли дешевле?
+            .product-info__actions
+                button.btn.btn--big.btn--bg-orange
+                    |   Купить
+                button.btn.btn--contour-gray.btn--big
+                    |   Купить в 1 клик
+    .product-info__advantages
+        .product-info__advantage
+            .product-info__advantage-header
+                +icon('wallet','product-info__advantage-icon')
+                span.product-info__advantage-title
+                    |   Оплата
+            .product-info__advantage-body
+                ul.product-info-list.product-info-list--advantage
+                    each item in ['Наличные', 'Электронные деньги','Сбербанк','Безналичная оплата']
+                        li.product-info-list__item= item
+        .product-info__advantage
+            .product-info__advantage-header
+                +icon('fast-delivery','product-info__advantage-icon')
+                span.product-info__advantage-title
+                    |   Доставка
+            .product-info__advantage-body
+                p.product-info__text
+                    |   По Минску сегодня курьером - <b>бесплатно</b>
+                p.product-info__text
+                    |   самовывоз с нашего <br> магазина - <b>бесплатно</b>
+        .product-info__advantage
+            .product-info__advantage-header
+                +icon('warehouse','product-info__advantage-icon')
+                span.product-info__advantage-title
+                    |   Самовывоз
+            .product-info__advantage-body
+                p.product__text
+                    |   Москва, проспект Андропова, д. 11, к. 2, павильон № 1/2
+                a(href='').product-info__link
+                    |   Яндекс карты

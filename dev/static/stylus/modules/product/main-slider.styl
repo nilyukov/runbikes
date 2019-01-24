@@ -1,0 +1,50 @@
+.product
+  &-slider
+    overflow hidden
+    margin-right: 15px
+    position relative
+    padding-left: 100px
+    @media screen and (max-width: phoneSize)
+      padding-left: 0
+      margin-right: 0
+
+    &__img
+      max-width: 100%
+      max-height: 100%
+      height auto
+      margin: 0 auto
+      &-wrapper
+        outline none
+
+
+  &-slider-dots
+    position absolute
+    left: 0
+    top: 0
+    width: 65px
+    @media screen and (max-width: phoneSize)
+      display: none
+    &__btn
+      size(65px)
+      align-items: center
+      display: flex
+      justify-content: center
+      cursor pointer
+      &-icon
+        size(30px)
+        fill alto
+
+    &__item
+      border 2px solid transparent
+      border-radius 2px
+      margin-bottom: 10px
+      cursor pointer
+      outline none
+      &.slick-current
+        border-color blaze-orange
+
+    &__img
+      max-width: 100%
+      max-height: 100%
+      height: auto
+

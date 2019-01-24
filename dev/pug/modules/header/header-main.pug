@@ -1,0 +1,34 @@
+.header__main
+    .container
+        .header__content
+            if(pageClass === 'index-page')
+                .header__logo.logo
+                    img(src="static/img/general/logo.png" alt="Логотип").logo__img
+            else
+                .header__logo.logo
+                    a(href='index.html')
+                        img(src="static/img/general/logo.png" alt="Логотип").logo__img
+            .header__phones
+                .header__item.header__item--mobile
+                    a(href="tel: +375293989805").header__phone
+                        |    +375293989805
+                    a(href="#").header__link
+                        |   Заказать звонок
+                .header__item
+                    a(href="tel: +375293989805").header__phone
+                        |    +375293989805
+                    span.header__description
+                        |   Звонок бесплатный
+            .header__address.header-address
+                +icon('location', 'header-address__icon')
+                span.header-address_text
+                    |   Минск, пр-т Победителей 12. к. 2
+            .header__shop
+                .header-goods
+                    span.header-goods__price
+                        |   0 &#8381;
+                    span.header-goods__count
+                        |   0 товаров
+                .header-basket
+                    +icon('basket','header-basket__icon')
+                    span.header-basket__text Корзина

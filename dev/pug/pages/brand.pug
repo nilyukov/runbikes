@@ -1,0 +1,33 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Страница бренда'
+    - var pageClass = 'brand-page'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link
+                        |   Главная
+                li.breadcrumbs__item
+                    a(href="brands.html").breadcrumbs__link
+                        |   Бренды
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                    |   Puky
+    section.s-brand.s-border-bottom
+        .container
+            h1.title-page
+                |   Puky
+            include ../modules/brand/info
+    section.s-slider.s-border-bottom
+        .container
+            include ../modules/brand/slider-1
+    section.s-slider
+        .container
+            include ../modules/brand/slider-2
+    section.s-content
+        .container
+            include ../modules/brand/content

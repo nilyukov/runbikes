@@ -1,0 +1,45 @@
+nav.header__main-nav.main-nav
+    ul.main-nav__list
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Самокаты
+            include main-nav-dropdown
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Велосипеды
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Ролики
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Скейты
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Беговелы
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Батуты
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Аксессуары и запчасти
+        li.main-nav__item
+            a(href="").main-nav__link
+                |   Еще
+                +icon('down-chevron', 'main-nav__icon')
+
+.footer__contacts-mobile
+    .footer__item
+        a(href="tel:88007077512").footer__phone
+            | 8 (800) 707-75-12
+        span.footer__text
+            | Звонок бесплатный
+    .footer__item
+        span.footer__text
+            | +7 (495) 120-20-36
+        a(href="mailto:toys@gmail.com").footer__mail
+            | toys@gmail.com
+    .footer__item
+        .yandex-market
+            img(src="static/img/general/market.svg" alt="" )
+            a(href="").btn.btn--small.btn--transparent-gray.btn--inline
+                | Оставить отзыв

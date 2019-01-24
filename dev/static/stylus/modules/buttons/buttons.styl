@@ -1,0 +1,59 @@
+.btn
+  height 40px
+  border 1px solid blaze-orange
+  border-radius 4px
+  background-color white
+  line-height 38px
+  font-weight: 600
+  color blaze-orange
+  cursor pointer
+  padding 0 20px
+  display block
+  text-align center
+  transition all linear .3s
+  width 100%
+  white-space nowrap
+  &:hover
+    background-color blaze-orange
+    color white
+  &.btn
+    &--transparent
+      &--white
+        color white
+        background-color transparent
+        border-color white
+        &:hover
+          background-color white
+          color tundora
+      &-gray
+        border-color rgba(38, 38, 38, 0.15)
+        background-color transparent
+        color oslo-gray
+        &:hover
+          background-color rgba(38, 38, 38, 0.15)
+          color white
+
+    &--round
+      border-radius 20px
+    &--inline
+      display inline-block
+      width auto
+    &--small
+      height 30px
+      padding 0 15px
+      line-height 28px
+    &--bg
+      &-orange
+        background-color: blaze-orange
+        color white
+    &--contour
+      &-gray
+        border 2px solid alto
+        line-height: 36px
+        color tundora
+        &:hover
+          background-color: alto
+          color white
+    &--big
+      line-height: 48px
+      height: 50px

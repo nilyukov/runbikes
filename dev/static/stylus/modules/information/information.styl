@@ -1,0 +1,65 @@
+@import "news.styl"
+@import "brands.styl"
+@import "review.styl"
+
+.information
+  display flex
+  @media screen and (max-width: tabletSize)
+    flex-wrap wrap
+  @media screen and (max-width: phoneSize)
+    flex-direction column
+  & > *
+    flex 1
+    padding-right 30px
+    @media screen and (max-width: tabletSize)
+      flex 0 0 50%
+      width 50%
+    @media screen and (max-width: phoneSize)
+      flex 1
+      width 100%
+
+
+    &:last-child
+      padding-right 0
+
+
+  &-item
+    @media screen and (max-width: phoneSize)
+      margin-top 40px
+    &:first-child
+      @media screen and (max-width: phoneSize)
+        margin-top 0
+    &__link
+      display inline-block
+      border-bottom 1px solid rgba(38, 38, 38, 0.15)
+      color mine-shaft
+      &__count
+        color chelsea-cucumber
+
+    &__body
+      height 250px
+      @media screen and (max-width: phoneSize)
+        height auto
+        margin-bottom 20px
+
+
+
+    &__footer
+      display flex
+      & > *
+        margin-right 5px
+        &:last-child
+          margin-right 0
+    &.information-item--wide
+      @media screen and (max-width: tabletSize)
+        flex 1
+        margin-top 40px
+        width 100%
+      .information-item
+        &__body
+          @media screen and (max-width: tabletSize)
+            height 150px
+
+          @media screen and (max-width: phoneSize)
+            height auto
+            margin-bottom 20px

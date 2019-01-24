@@ -1,0 +1,37 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Страница продукта'
+    - var pageClass = 'product-page'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link
+                        |   Главная
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link
+                        |   Каталог
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link
+                        |   Беговелы
+                li.breadcrumbs__item
+                    a(href="index.html").breadcrumbs__link
+                        |   Беговелы Puky
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                        |   Puky
+    section.s-product
+        .container
+            .product
+                .product__header
+                    include ../modules/product/slider
+                    include ../modules/product/info
+                .product__body
+                    include ../modules/product/details
+    include ../modules/advantages/advantages
+    include ../modules/product/goods
+    include ../modules/category/content
+

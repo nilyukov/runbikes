@@ -1,0 +1,41 @@
+.products-line-slider
+
+  .product-prev
+    margin 10px 15px 30px
+    border-color: transparent
+    @media screen and (max-width: 549px)
+      border-color: alto
+      margin 10px 0 30px
+  &__navigation
+    justify-content space-between
+    align-items center
+    display none
+    @media screen and (max-width: tabletSize)
+      display flex
+  &__btn
+    size(40px)
+    display flex
+    align-items center
+    justify-content center
+    border 1px solid alto
+    border-radius 2px
+  &__icon
+    size (15px)
+    fill blaze-orange
+  &__dot
+    size(10px)
+    border-radius 50%
+    background-color alto
+    display block
+    cursor pointer
+  &__dots
+    .slick-dots
+      display flex
+      align-items center
+      li
+        margin-right 10px
+        &:last-child
+          margin-right 0
+        &.slick-active
+          .products-line-slider__dot
+            background-color blaze-orange

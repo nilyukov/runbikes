@@ -1,0 +1,60 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Бренды'
+    - var pageClass = 'brands-page'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='index.html').breadcrumbs__link
+                    |   Главная
+                li.breadcrumbs__item
+                    span.breadcrumbs__current
+                    |   Бренды
+    section.s-brands
+        .container
+            .brands
+                h1.title-page
+                    |   Бренды
+                ul.brands__list
+                    each brand in [{img: 'puky.jpg', name: 'PUKY'}, {img: 'hudora.jpg', name: 'HUNDORA'}, {img: 'merida.jpg', name: 'Merida'}, {img: 'micro.jpg', name: 'Micro'}, {img: 'scool.jpg', name: 'SCOOL'},  {img: 'strider.jpg', name: 'Strider'}]
+                        li.brands__item
+                            a(href="").brand
+                                img(src="static/img/content/brands/" + brand.img alt="Логотип бренда").brand__img
+                                span.brand__name=brand.name
+                    each brand in [{img: 'puky.jpg', name: 'PUKY'}, {img: 'hudora.jpg', name: 'HUNDORA'}, {img: 'merida.jpg', name: 'Merida'}, {img: 'micro.jpg', name: 'Micro'}, {img: 'scool.jpg', name: 'SCOOL'},  {img: 'strider.jpg', name: 'Strider'}]
+                        li.brands__item
+                            a(href="").brand
+                                img(src="static/img/content/brands/" + brand.img alt="Логотип бренда").brand__img
+                                span.brand__name=brand.name
+                    each brand in [{img: 'puky.jpg', name: 'PUKY'}, {img: 'hudora.jpg', name: 'HUNDORA'}, {img: 'merida.jpg', name: 'Merida'}, {img: 'micro.jpg', name: 'Micro'}, {img: 'scool.jpg', name: 'SCOOL'},  {img: 'strider.jpg', name: 'Strider'}]
+                        li.brands__item
+                            a(href="").brand
+                                img(src="static/img/content/brands/" + brand.img alt="Логотип бренда").brand__img
+                                span.brand__name=brand.name
+                    each brand in [{img: 'puky.jpg', name: 'PUKY'}, {img: 'hudora.jpg', name: 'HUNDORA'}, {img: 'merida.jpg', name: 'Merida'}, {img: 'micro.jpg', name: 'Micro'}, {img: 'scool.jpg', name: 'SCOOL'},  {img: 'strider.jpg', name: 'Strider'}]
+                        li.brands__item
+                            a(href="").brand
+                                img(src="static/img/content/brands/" + brand.img alt="Логотип бренда").brand__img
+                                span.brand__name=brand.name
+                    each brand in [{img: 'puky.jpg', name: 'PUKY'}, {img: 'hudora.jpg', name: 'HUNDORA'}, {img: 'merida.jpg', name: 'Merida'}, {img: 'micro.jpg', name: 'Micro'}, {img: 'scool.jpg', name: 'SCOOL'},  {img: 'strider.jpg', name: 'Strider'}]
+                        li.brands__item
+                            a(href="").brand
+                                img(src="static/img/content/brands/" + brand.img alt="Логотип бренда").brand__img
+                                span.brand__name=brand.name
+    section.s-content
+        .container
+            .content-block
+                h3.title-block
+                    |   Сео текст по брендам
+                p.text
+                    |   Купить беговел можно в нашем интернет-магазине.
+                    |   Это обойдется недорого. В ассортименте есть большое количество моделей от известных производителей.
+                    |   Все товары соответствуют европейским стандартам безопасности.
+                p.text
+                    |   Наш магазин обслуживает покупателей из всех областей Беларуси. Можно покупать товар партиями или поштучно.
+                    |   Доставка осуществляется в кратчайшие сроки не зависимо от количества приобретаемого товара.
+                    |   В случае необходимости магазин оказывает бесплатные консультации.

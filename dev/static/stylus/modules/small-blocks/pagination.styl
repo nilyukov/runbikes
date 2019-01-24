@@ -1,0 +1,58 @@
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__wrapper
+    position relative
+
+  &__btn
+    size(40px)
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__icon
+    fill blaze-orange
+    size(18px)
+
+  &__list
+    display: flex
+    align-items: center
+
+  &__link
+    size(40px)
+    display: flex
+    align-items:  center
+    justify-content center
+    color: tundora
+    font-size: 12px
+
+  &__item
+    border 1px solid alto
+    border-right 0
+
+    &:last-child
+      border-right 1px solid alto
+
+    &.pagination__item
+      &--active
+        background-color: alto
+
+  &__count
+    display: flex
+    align-items: center
+    font-size: 12px
+    margin-left: auto
+    position absolute
+    right: 0
+    top: 0
+    @media screen and (max-width: phoneSize)
+      position static
+      justify-content: center
+      margin-top: 20px
+
+    & > *
+      margin-right: 10px
+      &:last-child
+        margin-right: 0

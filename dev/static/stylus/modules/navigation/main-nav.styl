@@ -1,0 +1,50 @@
+.main-nav
+  &__list
+    align-items center
+    display flex
+    position relative
+
+  &__link
+    display block
+    padding 15px 0
+    font-size 16px
+    line-height 1.88
+    color tundora
+    font-weight 600
+    border-bottom 2px solid transparent
+    align-items center
+
+
+
+  &__item
+    margin-right 40px
+    &:last-child
+      margin-right 0
+    &:hover
+      .main-nav
+        &__link
+          border-bottom-color blaze-orange
+        &__dropdown-wrapper
+          display block
+
+  &__dropdown
+    display inline-flex
+    left 0
+    background-color white
+    padding-top 10px
+    box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05)
+
+    &-wrapper
+      display none
+      position absolute
+      top 100%
+      width 100%
+      z-index 5
+      
+  &__icon
+    size(12px)
+    fill tundora
+    margin-left 10px
+
+
+

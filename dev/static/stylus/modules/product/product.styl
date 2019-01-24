@@ -1,0 +1,225 @@
+@import "prev.styl"
+@import "line-slider.styl"
+@import "line-border-slider.styl"
+@import "main-slider.styl"
+@import "details.styl"
+@import "review.styl"
+
+.product
+  &__header
+    margin-bottom: 50px
+    display: flex
+    @media screen and (max-width: phoneSize)
+      flex-direction column
+      margin-bottom: 20px
+    & > *
+      flex 0 0 calc(50% \- 15px)
+      width: calc(50% \- 15px)
+
+      @media screen and (max-width: phoneSize)
+        flex 0 0 100%
+        width: 100%
+
+      &:last-child,
+      &:first-child
+        @media screen and (max-width: tabletSize)
+          flex 0 0 100%
+          width: 100%
+
+    @media screen and (max-width: tabletSize)
+      flex-wrap wrap
+
+
+  &-info
+    margin-left: 15px
+    color tundora
+    @media screen and (max-width: phoneSize)
+      margin-left: 0
+    &__text
+      font-size: 13px
+
+    &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 20px
+      .title-page
+        margin-bottom: 0
+
+    &__body
+      margin-bottom: 50px
+      @media screen and (max-width: phoneSize)
+        margin-bottom: 0
+      & > *
+        margin: 30px 0
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-bottom: 0
+
+    &__logo
+      height: 50px
+      @media screen and (max-width: phoneSize)
+        display: none
+
+    &__row
+      display: flex
+      align-items: center
+      justify-content: space-between
+      @media screen and (max-width: phoneSize)
+        flex-wrap wrap
+
+    &__rating
+      display: flex
+      align-items: center
+      & > *
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+
+      &-stars
+        display: flex
+        align-items: center
+        flex 0 0 auto
+        & > *
+          margin-right: 5px
+          &:last-child
+            margin-right: 0
+
+      &-icon
+        size(15px)
+        fill alto
+        &--active
+          size(15px)
+          fill blaze-orange
+
+    &__available
+      display: flex
+      align-items: center
+      @media screen and (max-width: phoneSize)
+        display: none
+      & > *
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+      &-view
+        align-items: center
+        display: flex
+        overflow: hidden
+        border-radius 2px
+        & > *
+          margin-right: 2px
+          &:last-child
+            margin-right: 0
+
+        &__item
+          background-color: vida-loca
+          height: 16px
+          width: 8px
+
+
+    &__color
+      display: flex
+      align-items: center
+      & > *
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+
+    &__price
+      flex-direction: column
+      display: flex
+      align-items: flex-start
+      &-old
+        color oslo-gray
+        font-size: 13px
+        margin-bottom: 10px
+        text-decoration line-through
+
+      &-current
+        font-size: 30px
+        font-weight: 700
+        margin-bottom: 20px
+        white-space nowrap
+
+    &__link
+      font-size: 13px
+      border-bottom: 1px dotted alto
+      display: inline-block
+      color tundora
+
+    &__actions
+      display: flex
+      align-items: center
+      @media screen and (max-width: tabletSize)
+        flex-direction column
+      @media screen and (max-width: phoneSize)
+        flex-direction row
+        flex 0 0 100%
+        width: 100%
+        margin-top: 30px
+      & > *
+        margin-right: 20px
+        @media screen and (max-width: tabletSize)
+          margin-right: 0
+          margin-bottom: 20px
+        @media screen and (max-width: phoneSize)
+          margin-right: 20px
+          margin-bottom: 0
+        &:last-child
+          margin-right: 0
+          @media screen and (max-width: tabletSize)
+            margin-bottom: 0
+
+
+    &__advantages
+      display: flex
+      @media screen and (max-width: phoneSize)
+        display: none
+      & > *
+        flex 1
+        width: 100%
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
+
+    &__advantage
+      &-header
+        display: flex
+        align-items: center
+        margin-bottom: 15px
+        & > *
+          margin-right: 10px
+          &:last-child
+            margin-right: 0
+      &-icon
+        size(35px)
+        fill tundora
+
+      &-title
+        font-size: 16px
+        font-weight: 700
+
+    &-list
+      &.product-info-list--advantage
+        .product-info-list
+          &__item
+            padding-left: 15px
+            &:before
+              background-color: blaze-orange
+              left: 0
+      &__item
+        font-size: 13px
+        padding-left: 50px
+        position relative
+        line-height: 1.54
+        &:before
+          content ''
+          size(4px)
+          display: block
+          border-radius 50%
+          left: 10px
+          top: 8px
+          position: absolute
+          background-color: mine-shaft
+
